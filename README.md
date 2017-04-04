@@ -15,7 +15,7 @@ To include zookeeper-url in your maven build, use the following fragment in your
       <dependency>
         <groupId>org.honton.chas.zookeeper</groupId>
         <artifactId>zookeeper-url</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>0.0.1</version>
       </dependency>
       </dependencies>
   </build>

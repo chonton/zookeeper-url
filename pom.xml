@@ -4,7 +4,8 @@
 
   <groupId>org.honton.chas.zookeeper</groupId>
   <artifactId>zookeeper-url</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.1</version>
+  <name>ZooKeeper URL</name>
 
   <description>Java client for ZooKeeper URL</description>
   <url>https://github.com/chonton/zookeeper-url</url>
@@ -67,6 +68,13 @@
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.curator</groupId>
+      <artifactId>curator-client</artifactId>
+      <version>${curator.version}</version>
       <scope>test</scope>
     </dependency>
 
