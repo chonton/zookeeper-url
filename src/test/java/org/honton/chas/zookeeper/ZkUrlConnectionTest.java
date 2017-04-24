@@ -20,7 +20,6 @@ import org.junit.Test;
  * Test zk url handling
  */
 public class ZkUrlConnectionTest {
-  private static final byte[] TEST_BYTES = "testvalue".getBytes();
 
   private TestingServer zkTestServer;
   private CuratorFramework client;
@@ -28,7 +27,7 @@ public class ZkUrlConnectionTest {
 
   @BeforeClass
   public static void registerUrlHandler() {
-    ZkUrlHandler.register();
+    URL.setURLStreamHandlerFactory(new ZkUrlStreamHandlerFactory());
   }
 
   @Before

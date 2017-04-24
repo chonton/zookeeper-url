@@ -15,7 +15,7 @@ To include zookeeper-url in your maven build, use the following fragment in your
       <dependency>
         <groupId>org.honton.chas.zookeeper</groupId>
         <artifactId>zookeeper-url</artifactId>
-        <version>0.0.1</version>
+        <version>0.0.2</version>
       </dependency>
       </dependencies>
   </build>
@@ -25,8 +25,16 @@ To include zookeeper-url in your maven build, use the following fragment in your
 Before creating a URL with a 'zk' scheme, the ZkUrlHandler must be registered.
 This only needs to be done once per jvm instance. 
 ```java
-  ZkUrlHandler.register();
+    URL.setURLStreamHandlerFactory(new ZkUrlStreamHandlerFactory());
 ```
+
+Alternatively, use the ```org.honton.chas.url.extension.urlhandler.UrlStreamHandlerRegistry``` class
+from the [org.honton.chas.url:url-extension](https://github.com/chonton/url-extension) dependency to
+support multiple URLStreamHandlerFactory instances in the same JVM process.
+```java
+   UrlStreamHandlerRegistry.register();
+```
+
 
 ## ZK scheme URL Support
 Once ZkUrlHandler is registered, URLs with the 'zk' scheme are supported.

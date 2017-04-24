@@ -4,7 +4,7 @@
 
   <groupId>org.honton.chas.zookeeper</groupId>
   <artifactId>zookeeper-url</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
   <name>ZooKeeper URL</name>
 
   <description>Java client for ZooKeeper URL</description>

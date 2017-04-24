@@ -7,21 +7,7 @@ import java.net.URLStreamHandler;
 /**
  * Factory for ZkUrlConnection(s)
  */
-public class ZkUrlHandler extends URLStreamHandler {
-
-  private static ZkUrlHandler SINGLETON;
-
-  /**
-   * Register a singleton instance with the jvm
-   */
-  public static void register() {
-    synchronized (ZkUrlHandler.class) {
-      if (SINGLETON == null) {
-        SINGLETON = new ZkUrlHandler();
-        UrlStreamHandlerRegistry.getInstance().registerURLStreamHandler("zk", SINGLETON);
-      }
-    }
-  }
+public class ZkUrlStreamHandler extends URLStreamHandler {
 
   /**
    * Obtain the default ZooKeeper port
